@@ -1,0 +1,200 @@
+("name" ."up.xyzzy.jp/public/sana/")
+("author" . "")
+("url" . "http://up.xyzzy.jp/public/sana/")
+("description" . "")
+("packages"
+( ("name" . "siki")
+ ("version" . "2007.09.23")
+ ("author" . "SANO Masatoshi")
+ ("file" . "siki2007.09.23f185cc1c0abba6b42e6c95a62143c65c.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fsiki&file=siki2007.09.23f185cc1c0abba6b42e6c95a62143c65c.tar.gz")
+ ("description" . "General wiki framework for xyzzy with lack featured pseudo howm example.
+
+とんがった人向け汎用wikiフレームワークなつもり。
+
+howmもどき(実装しかけ)を同梱しとります。
+予定とかTodoがどうこうという部分はさっぱり実装していないのでよろしく。")
+ ("md5" . "bf0ac8c68a8a534d7d8d850233d5dd0c")
+ ("time" . 3399520539)
+ ("depends")
+ ("category" "Documentation" "Development" "Lisp")
+ ("changes" . "")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "cl-json")
+ ("version" . "2008.02.07")
+ ("author" . "SANO Masatoshi")
+ ("file" . "cl-json2008.02.074557c8e39be36b38848190c60f5e1c51.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fcl-json&file=cl-json2008.02.074557c8e39be36b38848190c60f5e1c51.tar.gz")
+ ("description" . "just decode part of cl-json.")
+ ("md5" . "d98b59dfd49771a6de1b66f07cf45532")
+ ("time" . 3411309835)
+ ("depends")
+ ("category" "Lisp" "Development")
+ ("changes" . "2008-2-07(Thu)
+First release")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "auto-time-stamp")
+ ("version" . "2007.05.15")
+ ("author" . "Junichiro KITA")
+ ("file" . "auto-time-stamp2007.05.155cb26152422af9111bee1ee311e05ab7.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fauto-time-stamp&file=auto-time-stamp2007.05.155cb26152422af9111bee1ee311e05ab7.tar.gz")
+ ("description" . "kitajさんのauto-time-stamp.lです。
+
+GNU GPLでのライセンスでのnetinstallerへの再配置の許可を
+06のruby会議で頂いたまま放置してました。
+
+そのままでは使いにくいところがあるので
+wikiに上っているものと等価な少々の訂正を…")
+ ("md5" . "3c56102f8ed101712346d7f330f3f1f1")
+ ("time" . 3388227253)
+ ("depends")
+ ("category")
+ ("changes" . "")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "flex-fill")
+ ("version" . "2007.05.15")
+ ("author" . "Junichiro KITA")
+ ("file" . "flex-fill2007.05.158f60f4582dd200e36370b119182daf04.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fflex-fill&file=flex-fill2007.05.158f60f4582dd200e36370b119182daf04.tar.gz")
+ ("description" . "kitajさんのhelp.lです。
+
+GNU GPLでのライセンスでのnetinstallerへの再配置の許可を
+06のruby会議で頂いたまま放置してました。")
+ ("md5" . "49a2ef277de8a0b8da69870f02f2a4e4")
+ ("time" . 3388226032)
+ ("depends")
+ ("category")
+ ("changes" . "")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "ldoc")
+ ("version" . "2007.05.15")
+ ("author" . "Junichiro KITA")
+ ("file" . "ldoc2007.05.1577f58a008b4a65e2b36de265b88b8080.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fldoc&file=ldoc2007.05.1577f58a008b4a65e2b36de265b88b8080.tar.gz")
+ ("description" . "kitajさんのhelp.lです。
+
+GNU GPLでのライセンスでのnetinstallerへの再配置の許可を
+06のruby会議で頂いたまま放置してました。
+
+ref2docにあるymtzさんのパッチを取りこみました。")
+ ("md5" . "5160af033542f598589380c3c2628182")
+ ("time" . 3388225745)
+ ("depends")
+ ("category" "Development" "Documentation")
+ ("changes" . "")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "niup")
+ ("version" . "2007.05.15")
+ ("author" . "SANO Masatoshi")
+ ("file" . "niup2007.05.15922ca49be66cbd2be17a1a8b73021561.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fniup&file=niup2007.05.15922ca49be66cbd2be17a1a8b73021561.tar.gz")
+ ("description" . "netinstaller用のファイルを作成・アップロードできます。
+
+netinstaller以外からの
+インストールは想定していません。
+netinstallerの動作概要を知らない人も想定していません。
+起動方法は
+M-x niup
+
+です。
+
+最初にSettingからアカウントを取得してください。
+あとはdescribe-bindingsと
+服部プロダクツの操作の勘でなんとかしてください。
+根性は必要かもしれません。
+困ったらメールなりwikiの質問箱なりで対応させていただきます。
+
+
+無事uploadできたファイルは
+
+http://up.xyzzy.jp/public/あかうんとめい/
+
+に公開されます。
+
+全てのアカウントに共有なni用のアドレスは
+http://up.xyzzy.jp/public/
+です。危険な香りがしますが。
+
+お願い
+-まだ実験中です。予定にはない中止、停止に対する覚悟はお願いします。
+-何か(特にセキュリティに関しては)フィードバックをお願いします。
+-公開してしまったらひっこめることはこのソフトから直にはまだできません。
+--上書きはできるので直してなんとかすると良いかもしれません。
+-扱いの利便のため自由なライセンスでの公開をお願いします。(すくなくともそのつもりでいてください。")
+ ("md5" . "5c7ca7ac931cb774e479e305491f9c5e")
+ ("time" . 3388227770)
+ ("depends" "Junklibrary" "Netinstaller")
+ ("category" "Lisp" "Development" "Network")
+ ("changes" . "authorの書き換えができるようになった")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "tips open session")
+ ("version" . "2007.08.20")
+ ("author" . "SANO Masatoshi")
+ ("file" . "tips open session2007.08.208c3d604dda8883e6b8c39f0fb1363d18.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Ftips%20open%20session&file=tips%20open%20session2007.08.208c3d604dda8883e6b8c39f0fb1363d18.tar.gz")
+ ("description" . "When you find-file a file that typed as ssn.
+this script shadow it from find-file and load-session it.
+
+wikiの
+tips/ファイルを開く時にセッションファイルならば展開する
+です。多分。
+英語の説明はむりやりかいたけど意味とおってるかどうか謎だなぁ。")
+ ("md5" . "a42dea2ac1d146b9354dd2c0e6eeba31")
+ ("time" . 3396599952)
+ ("depends")
+ ("category")
+ ("changes" . "Experimental use of niup.
+I will copy from tips on wiki that I wrote and is not modified long.
+
+niupの実験ひきつづき。
+今後の変更が少なさそうなものはちょきちょき移しても良かろうかと。")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "help")
+ ("version" . "2007.05.15")
+ ("author" . "Junichiro KITA")
+ ("file" . "help2007.05.1597442352f499256ff368f9a4d3e57f22.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fhelp&file=help2007.05.1597442352f499256ff368f9a4d3e57f22.tar.gz")
+ ("description" . "kitajさんのhelp.lです。
+
+GNU GPLでのライセンスでのnetinstallerへの再配置の許可を
+06のruby会議で頂いたまま放置してました。")
+ ("md5" . "1590cdba95674e4d2be5869cd5b6a000")
+ ("time" . 3388226071)
+ ("depends")
+ ("category" "Documentation")
+ ("changes" . "")
+ ("notice" . "有効にするためにはdumpをしなおす必要があります。")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "skk-wrap")
+ ("version" . "2007.07.13")
+ ("author" . "SANO Masatoshi")
+ ("file" . "skk-wrap2007.07.13fe73c265652555e7ec801eaf1ef9b7dc.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fsana%2Fskk-wrap&file=skk-wrap2007.07.13fe73c265652555e7ec801eaf1ef9b7dc.tar.gz")
+ ("description" . "これは「高速で効率的な日本語入力環境を提供するシステムSKK」のxyzzy用
+実行環境です。")
+ ("md5" . "1f38f0422212c65c16af96ea4437b7c1")
+ ("time" . 3393298607)
+ ("depends" "Emacslisp移植キット")
+ ("category")
+ ("changes" . "7月最初のバージョンでコンパイルできるようにした。")
+ ("notice" . "ddskkのインターフェイスが結構
+かわるので新しいバージョンでしかコンパイルできなさそうです。")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)
+)

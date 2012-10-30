@@ -1,0 +1,5 @@
+("name" . "らいおさむのお屋敷")
+("author" . "Osamu Rai")
+("url" . "http://www.osamurai.flnet.org/")
+("description" . "")
+("packages" (("name" . "scratch-plus") ("version" . "0.0.0.2") ("author" . "Osamu Rai") ("file" . "scratch-plus.lzh") ("src" . "http://www.osamurai.flnet.org/memo/xyzzy/scratch-plus.lzh") ("description" . "*scratch* バッファの拡張版（？）") ("category") ("md5" . "4fbe84b1c00aab05b524f0710fa92956") ("time" . 3357034822) ("depends") ("changes" . "・scratch-plus-save-file の際に *scratch* バッファの存在を確認するように修正。") ("notice" . "") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "css+-mode") ("version" . "0.0.0.3") ("author" . "Osamu Rai") ("file" . "css_plus-mode.lzh") ("src" . "http://www.osamurai.flnet.org/memo/xyzzy/css_plus-mode.lzh") ("description" . "CSS編集用のメジャーモード") ("category") ("md5" . "a9aa7c45ce81b34a73644d83d0fc4db4") ("time" . 3474154466) ("depends") ("changes" . "・498行目の間違いを修正。×*css-popup-completion-list* → ○*css+-popup-completion-list*") ("notice" . "") ("load-after-install" . "") ("load-before-uninstall" . "")))

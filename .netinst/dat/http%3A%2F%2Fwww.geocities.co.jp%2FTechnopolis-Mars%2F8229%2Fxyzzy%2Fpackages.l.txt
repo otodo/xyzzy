@@ -1,0 +1,34 @@
+
+("name" . "Memory Palace")
+
+("author" . "ippei")
+
+("url" . "http://www.geocities.co.jp/Technopolis-Mars/8229/")
+
+("description" . "記憶の宮殿")
+
+("packages" 
+(
+("name" . "navi") 
+("version" . "20030502-0.7") 
+("author" . "ippei") 
+("file" . "navi-20030502-v07.lzh") 
+("src" . "http://www.geocities.co.jp/Technopolis-Mars/8229/xyzzy/navi-20030502-v07.lzh") 
+("description" . "簑系をxyzzyで使う") 
+("md5" . "783f5d09b1907dd9e236b8e3cdefdfba") 
+("time" . 3260882288) 
+("depends") 
+("changes" . "NetInstaller対応") 
+("notice" . "F2キーを使っています。注意してください。使い方はソース(navi.l)とWEBを参照してください。")) 
+(
+("name" . "idea-marathon-v02") 
+("version" . "20030502-0.2") 
+("author" . "ippei") 
+("file" . "idea-marathon-20030502-v02.lzh") 
+("src" . "http://www.geocities.co.jp/Technopolis-Mars/8229/xyzzy/idea-marathon-20030502-v02.lzh") 
+("description" . "アイデアマラソンを簑系で管理する。navi.lが必要。") 
+("md5" . "aa3d0c09b38267a0aec44e4a692c5f35") 
+("time" . 3260882288) 
+("depends" "navi.l") 
+("changes" . "NetInstaller対応") 
+("notice" . "使い方はソース(navi.l,idea-marathon.l)とWEBを参照してください。")))

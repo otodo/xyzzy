@@ -1,0 +1,750 @@
+("name" ."up.xyzzy.jp/public/whimsical/")
+("author" . "")
+("url" . "http://up.xyzzy.jp/public/whimsical/")
+("description" . "")
+("packages"
+( ("name" . "update-keywords")
+ ("version" . "2008.12.27")
+ ("author" . "Masahiro Nakano")
+ ("file" . "update-keywords2008.12.277d9f542008a7bb59579f25ff61431b7a.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fupdate-keywords&file=update-keywords2008.12.277d9f542008a7bb59579f25ff61431b7a.tar.gz")
+ ("description" . "■機能
+  正規表現キーワードではなく、キーワードファイルによる色指定を、
+  lispで動的に追加・更新・指定解除できるようにします。
+
+  また、ファイルの先頭で以下のようにすると、キーワードファイル xxx を
+  メジャーモードのキーワードに追加して表示します。
+    -*- keyword: xxx; -*- 
+
+■インストール
+  ;; ni-autoload を使用している人は不要です。
+
+    (require \"update-keywords\")
+
+")
+ ("md5" . "2304d3505463af4287611ddc9a1f2702")
+ ("time" . 3439374877)
+ ("depends")
+ ("category" "Utilities")
+ ("changes" . " on 2008-12-26
+  ・ファイルの先頭でキーワードファイルを指定できるように
+
+ on 2008-07-07
+  ・初版作成")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "cfns2")
+ ("version" . "2010.01.02")
+ ("author" . "Masahiro Nakano")
+ ("file" . "cfns22010.01.0261e889bb0ce53e0bb1414856be98f232.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fcfns2&file=cfns22010.01.0261e889bb0ce53e0bb1414856be98f232.tar.gz")
+ ("description" . "[ツール] [TAGSファイルの作成] で生成する c/c++ 用のタグファイル生成
+関数 c-maketags よりも c++への対応度を高めた c-maketags2 を提供します。
+tagdoc と連携して、ソース中のコメントを表示できるようにします。
+
+merge-tags を導入すると、XTAGSを再生成したときに自動的にタグデータを
+ロードします。
+")
+ ("md5" . "ec6f0a38139b3f9de277dce978812d0f")
+ ("time" . 3471350388)
+ ("depends")
+ ("category" "Development")
+ ("changes" . "2010-01-02
+・throw宣言が有っても抽出できるように修正
+・typedef 内の typename を処理できるように修正
+・_で始まるコンストラクタ名、タイプ名の取得に失敗するのを修正
+・ネストした型宣言のパーズを修正
+・friend class宣言があるときのパーズを修正
+・ローカル変数名の一覧取得で、コメント/文字列内の{}の出現に対応
+・ローカル変数名の一覧取得で、long/shrot int 型があると正しく型名が取れなかったのを修正
+・ローカル変数名の一覧取得で、return 文でおかしかったのを修正
+・ローカル変数名の一覧取得で、関数定義の外では正しくなかったのを修正
+・ローカルな変数名の一覧を取得する関数を追加
+・タグジャンプのダイアログ表示に、コメントは表示しないよう修正
+・名前空間付きの宣言になるべく対応した
+
+2009-09-27
+・\\file, @file が入っているコメントは抽出しないように変更
+
+2009-09-15
+・配列変数のタグが出力されないのを修正
+・関数宣言一行目の末尾コメントを抽出するように修正
+・typedef enum のコメントを抽出するように修正
+・コメントの整形処理をごみが入りにくくなるように修正。
+・class, struct の出力タグを tagdoc表示のために修正
+・インストール方法を修正, ni-autoloadのほうも修正
+
+2009-08-29
+・クラス名の抽出で無限ループにはまることがあったのを修正
+・クラス名で、テンプレート引数を伴なうときの宣言の対応をましにした。
+
+2009-08-22
+・公開")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "merge-tags")
+ ("version" . "2010.02.11")
+ ("author" . "Masahiro Nakano")
+ ("file" . "merge-tags2010.02.119acb3fb4b9601355cc8353a2e6c2dee7.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fmerge-tags&file=merge-tags2010.02.119acb3fb4b9601355cc8353a2e6c2dee7.tar.gz")
+ ("description" . " XTAGS (タグファイル) を差分更新できるようにします。また、タグファイル
+ を生成する時に指定したフォルダが、マージ対象なら、生成したタグをマージ
+ します。
+ 
+ *merge-tags-directory-alist* はディレクトリ名の組のリストです。
+ (pushnew '(\"d:/test\" \"d:/test2\") *merge-tags-directory-alist* :test 'equal)
+ でd:/test以下で生成したタグを d:/test2 のタグファイルにまとめます。
+ 
+ デフォルトでは、system-root 以下の XTAGS をすべて、system-rootにまと
+ めます。こうすると、 site-lispフォルダで修正があっても、lispフォルダ
+ タグを再生成する必要が無くなります。
+ 
+ *make-tags-ignore-paths* に無視するディレクトリにマッチする正規表現のリ
+ ストを指定する事ができます。
+ 
+ タグファイルを新規作成したとき、別のディレクトリのタグファイルの内容を
+ マージすることができます。ライブラリ等のタグファイルを生成しておき、
+ ライブラリを使用するディレクトリへマージすると便利です。
+")
+ ("md5" . "39a5157c694005c527b9073eca3cc284")
+ ("time" . 3474850902)
+ ("depends")
+ ("category" "Utilities")
+ ("changes" . "2010-02-11
+・ダイアログに「状態を記録しない」を追加。
+・*tag-path-filters* 廃止。フィルタは *make-tags-ignore-path-regexp-list* による正規表現のみ。
+・ディレクトリを抽出してからファイルを抽出していたのを、直接ファイルを抽出する設定に戻した。
+
+2010-01-02
+・差分更新でないときに、同じファイルを2回パーズしていたのを修正
+
+2009-10-11
+・タグを更新したファイルを記録する変数を追加
+・*merge-tags-copy-directory-alist* を追加。
+・その他、細かな修正
+
+2009-10-03
+・差分更新時に、XTAGSがないディレクトリがあるとエラーが出ていたのを修正
+
+2009-09-27
+・サブディレクトリを処理対象にしていなくても、1つ下のディレクトリまで
+  処理していたのを修正 (2009-08-29版のバグ)
+・メッセージの表示頻度を変更
+
+2009-08-29
+・*tag-path-filters* をディレクトリ名に対してのフィルタに変更し、高速化
+
+2009-08-18
+・デバッグ用の出力バッファを一時バッファに設定
+・make-tags-file1 で多値が返せていなかったのを修正
+・タグを出力するバッファを一時バッファにし忘れていたのを修正
+・*make-tags-ignore-paths* を設定していないときの高速化
+・いくつか関数名変更
+
+2009-01-10
+・ディレクトリ名の比較を equalp でするように修正
+・誤って default-directory を変更してしまっていたのを修正
+・XTAGS の生成時に、バッファサイズが大きくなると速度が遅くなるので、
+  バッファを一定サイズで分割するように変更。
+・タグファイルの作成に失敗する場合があるのを修正
+・debug用の キーワードシンボルを変更
+・差分更新の履歴をディレクトリごとに持つように修正。
+・タグファイル生成時にエラーが出るのを修正
+・*post-make-tags-hook* を追加
+・*make-tags-ignore-paths* が機能しなくなっていたのを修正
+・ほぼ作り直し
+・差分更新に対応
+・深さの指定が 0 以外おかしかったのを修正
+・無視するパスのマッチングを、string-looking-at から string-matchp
+  に変更
+・*make-tags-ignore-paths* を追加。
+・ni-autoload でうまくロードできていなかったのを修正
+
+2006/11/21
+・公開
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "katex-autoload-dir")
+ ("version" . "2008.01.10")
+ ("author" . "Masahiro Nakano")
+ ("file" . "katex-autoload-dir2008.01.1060c567f639293c16d16a361b6dfe7afb.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fkatex-autoload-dir&file=katex-autoload-dir2008.01.1060c567f639293c16d16a361b6dfe7afb.tar.gz")
+ ("description" . "■機能
+  katexロード時、または既にロードされている時は、この lisp がロードさ
+  れた時に、katex/autoload/ 以下の .l ファイルと ~/.katex ファイルを
+  自動でロードします。
+
+■インストール
+ .xyzzy か siteinit.l に下のを書いてください．
+  ni-autoload を使用している人は必要ありません。
+  (require \"katex-autoload-dir\")
+
+■アンインストール
+  ヒストリー変数は使用していません。
+  自分で書いた設定とインストールしたファイルを削除してください。
+")
+ ("md5" . "0f8d80c430ffb1038e9fae49aa9f355b")
+ ("time" . 3408965979)
+ ("depends" "KaTeX")
+ ("category" "Utilities")
+ ("changes" . "■更新履歴
+ on 2008-01-08
+  ・ ~/.katex ファイルがないときのメッセージの表示方法を変更
+
+ on 2007-09-23
+  ・公開
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "hs-tags")
+ ("version" . "2008.12.27")
+ ("author" . "Masahiro Nakano")
+ ("file" . "hs-tags2008.12.27efb7bfd805659f2f2ee87168a89d0a94.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fhs-tags&file=hs-tags2008.12.27efb7bfd805659f2f2ee87168a89d0a94.tar.gz")
+ ("description" . "■説明
+  haskell 言語用のタグシステムです。
+
+     [ツール] > [TAGSファイルを作成]
+
+  でソースディレクトリに .hs があるディレクトリを指定して、XTAGSを生成
+  してください。関数名などの上で F4 を押すと定義した部分にジャンプしま
+  す。S-F4 で戻ります。
+
+  tagdoc と併用することで、hadoc形式のコメントを メッセージウィンドウ
+  に表示できます。
+
+■インストール
+
+  ;; ni-autoload を使用している人は不要です。
+
+    (require \"hs-tags\")
+
+  と、.xyzzy か siteinit.l に書いてください。
+")
+ ("md5" . "d0254aacfd02531d996eb6a4de1566c6")
+ ("time" . 3439375327)
+ ("depends" "hs-mode" "tagdoc")
+ ("category" "Editing")
+ ("changes" . "■更新履歴
+ on 2008-12-27
+  ・公開
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "ldoc2")
+ ("version" . "2008.04.29")
+ ("author" . "Masahiro Nakano")
+ ("file" . "ldoc22008.04.299618e22f9f029db514313142ed00db14.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fldoc2&file=ldoc22008.04.299618e22f9f029db514313142ed00db14.tar.gz")
+ ("description" . "lisp-mode/lisp-interaction-mode でカーソル下のシンボルに
+対するドキュメントを表示します。")
+ ("md5" . "f7442c43145b8443882b943958fd1946")
+ ("time" . 3418413584)
+ ("depends")
+ ("category" "Editing")
+ ("changes" . " on 2008-04-24
+  ・デバッグ用のコードの使用・不使用を *features* で指定するように。
+
+ on 2008-03-31
+  ・遅延方法を少し変更し、CPU使用率の低減を図った
+
+ on 2008-01-18
+  ・遅延表示機能が働かずにすぐに表示されていたのを修正
+
+ on 2008-1-8
+  ・ *ldoc-enable-timer* が defparameter で宣言されていたのを defvarに変更
+  ・関数・変数で同名のものがある時、片方をpopup-string で表示するように変更 
+      (構造体は未対応)
+  ・カーソル移動直後ではなく、ワンテンポ遅れて表示するオプション
+    *ldoc-enable-timer* を追加。デフォルト on。
+  ・カーソル移動後に表示されるまでの時間指定 *ldoc-timer-wait* を追加
+  ・表示後、次に表示するまでの時間指定 *ldoc-timer-continued-wait* を追加
+
+ on 2007-9-1
+  ・シンボル上だけでなく、関数の引数位置でも関数ドキュメント表示
+  ・上記を有効にするオプション *ldoc-show-current-function-documents* を追加。
+       (default t で、有効)
+  ・ドキュメントを全て表示するように変更
+  ・関数・変数で同名のものがある時、片方をミニバッファ/popup-string で
+    表示するように変更 (構造体は未対応)
+  ・*ldoc-enable-timer* が non-nil で、ドキュメントを遅延して表示
+  ・キーボードマクロ実行中は表示しないように変更
+  ・*ldoc-activated-mode-list* を無視していたのを修正
+  ・細かなバグ修正
+
+ on 2007/3/3
+  ・変数と関数に同名のシンボルが有る場合に対応
+  ・上の機能を有効にするオプション *ldoc-show-same-name-documents* を追加
+      デフォルトは無効 (nil)
+  ・カーソル位置がシンボルの先頭の時にldocが表示されないことがあるのを修正
+  ・細かな修正
+  ・sort, call-interactively の引数を正しく表示できるように修正
+
+ on 2007/2/26
+  ・*buffer-package* を ldoc-buffer-package に変更
+    (*buffer-package* は xyzzy で既に使用済みでした)
+  ・*buffer-package* も利用して、シンボルを探すように変更
+  ・シンボルが見つからない時に、ldoc-buffer-package を
+    自動更新する *ldoc-auto-update-package* を追加
+  ・defvar-local を使用しないように再び修正
+
+ on 2007/2/21
+  ・デバッグ用の表示の削除し忘れを修正
+
+ on 2007/2/20
+  ・カーソル位置が移動しなくても表示するコマンドを指定する *ldoc-permitted-commands* を追加。
+      デフォルト値として mouse-nop を追加したので、マウスのクリックでドキュメントが表示可
+
+ on 2/20/2007
+  ・goal-column を保存していない場合があったのをさらに修正
+  ・一部 defvar-local を使用するように変更
+
+ on 2007/2/19
+  ・goal-column を保存していない場合があるのを修正
+  ・ldoc を表示しないコマンドを指定する *ldoc-inhibited-commands* を追加。
+  ・defvar-local を使用しないように変更
+
+ on 2006/11/21
+  ・type修正
+
+ on 2006/10/21
+  ・netinstaller 対応
+  ・関数引数がないときに NIL と表示するのを () に。
+
+ on 2006/05/29
+  ・ドキュメントがうまく拾えなくてエラーが出るときに表示をマイルドに
+
+ on 2006/05/10
+  ・dabbrev-popup完了時にも表示させる。
+    complete.l の popup-completion-list を再定義。
+      ※最後にフック *after-popup-completion-hook* を追加しただけ
+
+ on 2006/05/08
+  ・単語上だけでなく、単語の終端でもドキュメントを表示するように修正
+
+ on 2005/08/07
+  ・package を更新するための関数を追加
+
+ on 2004/10/28
+  ・カーソル移動系コマンド後のみ表示するように修正
+  ・minibuffer で入力後は表示を抑制
+
+ on 2004/03/26
+  ・デフォルトのパッケージ以外にバッファ中で指定された package も検索するように
+  ・関数ドキュメントも表示するように変更
+  ・細かな修正
+")
+ ("notice" . "popup-completion-list を再定義して、フックを追加しています。")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "howm-calendar")
+ ("version" . "2010.02.11")
+ ("author" . "Masahiro Nakano")
+ ("file" . "howm-calendar2010.02.11a372e183b682ffed29d0418ac70bbf40.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fhowm-calendar&file=howm-calendar2010.02.11a372e183b682ffed29d0418ac70bbf40.tar.gz")
+ ("description" . "■機能
+  howm で登録した予定を、カレンダーでもポップアップ表示します。
+
+■インストール
+  howm-init.l に下のを書いてください．
+  ni-autoload では設定を行いません。
+
+  (require \\\"howm-calendar\\\")
+
+■アンインストール
+  ヒストリー変数は使用していません。
+  自分で書いた設定とインストールしたファイルを削除してください。
+
+■使用方法
+  C-c , C で、カレンダー付き howm の Todo リストを表示します。
+
+■注意事項
+  ed::calendar-print を修正します。
+")
+ ("md5" . "e1e7956a74f483b60f1084d61075188f")
+ ("time" . 3474850874)
+ ("depends" "howm-wrap")
+ ("category" "Utilities")
+ ("changes" . "■更新履歴
+2010-02-11
+・HE-grep を導入しても動作するように修正。
+
+2007-09-16
+  ・ パッケージを elib に変更。
+  ・ 祝日の場合、数字の色をカレンダー本来の表示色で表示するよう変更
+  ・ *calendar-title-string-regexp-list* を追加。
+     calendar-title-string の変更に対応?
+
+2007-09-02
+  ・ インストール手順を変更
+  ・ *post-command-hook* が定義されていないのに対処
+
+2007-09-02
+  ・ 上書きする関数をcalender ではなく、ed::calender-print に最修正
+  ・ *calender-print-hook* 復活。
+  ・ 次の/前のスケジュールへ移動する 
+     calendar-next-schedule / calendar-previous-schedule を追加
+  ・ howm-menu, calendar からの終了方法を変更
+  ・ キー入力で予定をポップアップするように変更
+  ・ カレンダーからhowmの予定を検索できるように
+  ・ その他、細かい修正
+
+2007-09-01
+  ・ 分割方法を指定できるように変更 (*calendar-vertical-split*)
+  ・ *calendar-width*,  *calendar-height* で分割時のサイズも指定可
+  ・ *calendar-print-hook* を廃止
+  ・ 替わりに *calendar-mode-post-hook* を追加
+  ・ ed::calendar-print を修正していたのを calendar に変更
+  ・ calendar の折り返し表示をなしに変更
+  ・ その他、細かい修正
+
+2007-08-26 
+  ・ 公開
+
+2007-06-14
+  ・ schedule に対応
+  ・ 土曜日に予定等がつかなかったのを修正
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "katex-kill-proc")
+ ("version" . "2008.01.10")
+ ("author" . "Masahiro Nakano")
+ ("file" . "katex-kill-proc2008.01.10dfb606d0543240a55d190f80a1080415.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fkatex-kill-proc&file=katex-kill-proc2008.01.10dfb606d0543240a55d190f80a1080415.tar.gz")
+ ("description" . "KaTeX で platex などがファイルをロックして保存できない状態を回避します。
+")
+ ("md5" . "1f55a14e233f5db79e93932e95003e79")
+ ("time" . 3408965989)
+ ("depends" "katex-autoload-dir" "KaTeX")
+ ("category" "Utilities")
+ ("changes" . "■更新履歴
+ on 2008-1-8
+  ・ katex-autoload-dir を使うように
+
+ on 2007-1-9
+  ・ netinstaller に対応
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "tagdoc")
+ ("version" . "2010.02.11")
+ ("author" . "Masahiro Nakano")
+ ("file" . "tagdoc2010.02.1142d909a5f7551ca9d815f5cefeb44b80.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Ftagdoc&file=tagdoc2010.02.1142d909a5f7551ca9d815f5cefeb44b80.tar.gz")
+ ("description" . "■ Functionality
+ ldoc のようなドキュメントの表示を、タグに書き出しておいた情報を元に行
+ います。したがって、XTAGSの書き出しを対応しているものに変更しなければ、
+ 表示されません。タグシステムは、下位互換性を保っているので、基本的に
+ 遅くなる以外の副作用はありません。
+
+ 利用するためには、使用する各メジャーモードが xyzzy のタグシステムを実
+ 装している必要があります。
+
+ フルの機能を利用するためには、以下に示す 拡張した XTAGS フォーマット
+ でドキュメントも追加してください。
+
+ XTAGS ファイルからではなく、静的なデータからドキュメントを表示したい
+ 場合は、 add-tagdoc-data を使って設定します。このとき、XTAGS ファイル
+ がないディレクトリで静的なデータを追加すると、自動で XTAGS ファイルが
+ 生成されます。
+
+ merge-tags も導入していると、タグファイル更新時に自動的にドキュメント
+ も更新されます。
+
+■ Usage
+ ;; ni-autoloadを使用している人は不要です。
+ (require \"tagdoc\")
+ (turn-on-tagdoc)
+")
+ ("md5" . "cf6ddbebd6f96f9a1e6f3a4d63df92c9")
+ ("time" . 3474851512)
+ ("depends" "merge-tags")
+ ("category" "Documentation")
+ ("changes" . "2010-02-11
+・*tagdoc-show-same-name-documents* を 数値/nil で指定するようにし、
+  表示するドキュメント数を指定するようにした。
+・軽微な修正
+
+2010-01-02
+・カーソル移動中にエラーが表示されることがあったのを修正
+・カーソル移動中に無限ループにはまることがあったのを修正
+
+2009-09-27
+・サブディレクトリを処理対象にしていなくても、1つ下のディレクトリまで
+  処理していたのを修正
+・メッセージの表示頻度を変更
+
+2009-08-29
+・grep-dialog のレスポンス改善
+・grep-dialog で、tagdocの拡張フォーマットを正しく扱えていなかったのを修正
+
+2009-8-25
+・grep-dialog のレスポンス改善
+・grep-dialog で、tagdocの拡張フォーマットを正しく扱えていなかったのを修正
+
+2009-08-22
+・タグフォーマットにを追加
+・ni-autoload時に、tagdoc を有効にするようにした。
+・*tagdoc-print-message* を廃止し、*tagdoc-print-message-hash* を追加。
+表示するバッファ毎に表示用関数を指定するのではなく、タグファイルの拡
+張子毎に指定するようにした。
+・タグ表示のデータを一部キャッシュするようにし、レスポンス改善。
+・タグテーブル生成時から表示時に表示のための処理を遅延させ、テーブル作
+成高速化。
+・tagdoc構造体を stagdoc構造体から派生するように変更。
+結果として、tagdocテーブル生成を高速化。
+・tagdocテーブルの生成時の並行動作をましにした。
+・tagdocバッファを再評価すると、検索でヒットしなくなるバグを修正
+・XTAGS に埋め込まれた tagdoc で、引数とドキュメントを正規表現を使わ
+ずに取得するように変更
+・メッセージの表示を一部変更
+・デバッグ時の表示を少し改善 (同じメッセージはまとめるように)
+・変数 tagdoc-print-message を *tagdoc-print-message* に名前を変更
+・*find-entry-filter* を追加。
+・tagdoc-table の生成の非同期処理のレスポンスを改善
+・構造体 stagdoc を追加。
+・それに伴い、データ追加系と表示系の関数を修正。
+・typo修正
+・デバッグメッセージを自動追従するように変更
+・tagdoc-autoload-data が、実行可能なファイルだけをロードしていたの
+を修正。
+
+2009-01-07
+・テーブルを生成するときに、入力を与えなければ読み込みを加速するように変更
+
+2008-12-27
+・公開")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "lpp")
+ ("version" . "2008.05.05")
+ ("author" . "Masahiro Nakano")
+ ("file" . "lpp2008.05.056259615da12b482ac5a966aa7a18edfd.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Flpp&file=lpp2008.05.056259615da12b482ac5a966aa7a18edfd.tar.gz")
+ ("description" . "■機能
+  ・C-j や C-x C-e での評価を ファイル中の直近の
+    in-package で指定されたパッケージ内で評価するように。
+  ・eval-last-sexp で #S(...) や #1= などで始まるS式を、
+    #の部分から適切に評価するように。
+
+    (上記、2つの機能は常に有効です。)
+
+  ・マクロ展開や評価時に、結果を整形して出力するコマンド
+    pprint-eval-print-last-sexp を用意。
+
+    Shidoさんの pme と比べて、よりきれいに出力できるかもし
+    れませんが、その分バグを含んでいる可能性も高いです。
+
+    ※ 循環リストは整形表示しません。
+
+  ・pretty-print-list は、バッファに出力されたリストを整形します。
+    pprint-eval-print-last-sexp のように、 lisp の構文情報に基づ
+    くのではなく、桁位置や開き括弧、閉じ括弧に基づいて行います。
+    pprint-eval-print-last-sexp では整形できない循環リストや、
+    lispプログラムでない、複雑なリストを整形するときに利用してく
+    ださい。 xml-parser-modoki などの結果を整形するのに利用できます。
+
+
+■インストール
+ .xyzzy か siteini.l に下のを書いてください．
+  ni-autoload を使用している人は必要ありません。
+  (require \"lpp\")
+
+  また、Shido さんの lispmode.l を導入する事で、
+  整形出力が多少早くなると思います。 (推奨)
+
+  キーバインドは各自設定してください。
+  ;;例1
+  (define-key *lisp-interaction-mode* #\\LFD 'pprint-eval-print-last-sexp)
+
+  ;;例2
+  (define-key *lisp-interaction-mode* #\\LFD
+	      (x-key-macro 16 'eval-print-last-sexp 'pprint-eval-print-last-sexp))
+
+  ;;例3
+  (define-key *lisp-interaction-mode* #\\C-o
+	      (x-key-macro 16 'open-line 'pretty-print-list))
+")
+ ("md5" . "960261c989bfbff211be38a67f0060ab")
+ ("time" . 3418935396)
+ ("depends")
+ ("category" "Editing")
+ ("changes" . " on 2007-11-11
+  ・ pretty-print-list を追加。
+     整形処理したいリストの先頭の開き過去の上で実行する。
+
+ on 2007-2-18
+  ・*pprint-linebreak-list* を追加。
+
+ on 2007-1-26
+  ・文字列中の \\t, \\n を評価しないオプション *pprint-string-no-eval* を追加。デフォルトは off.
+
+ on 2007-1-24
+  ・lambda式でおかしかったのを修正
+
+ on 2007-1-24
+  ・ドット対の表示がおかしかったのを修正
+
+ on 2007-1-17
+  ・cond, case の展開を改善
+  ・出力のし方を eval-print-last-sexp に合わせた
+  ・eval-last-print-sexp で #1= が先頭にあるときはそれも含めて評価するように修正
+  ・循環リストで *print-circle* が t の場合に、無限ループに落ちるので
+    その場合は通常通りの出力に修正。
+  ・(let (x) ・・・) や (let () ・・・) でおかしかったのを修正。
+
+ on 2006-12-31
+  ・空リストの出力がおかしかったのを修正
+
+ on 2006-12-13
+  ・defunの展開がおかしかったのを修正
+  ・do, do* の展開を改善
+  ・時々、空行ができてしまうのを修正
+  ・lpp のマクロ定義がおかしかったのを修正
+
+ on 2006-12-08
+  ・keyword-package ～ というエラーが出るのを修正
+
+ on 2006-12-08
+  ・公開
+")
+ ("notice" . "  eval-print-last-sexp eval-region を修正しています。
+  
+  副作用として、C-j や C-x C-e の実行ごとにパッケージが
+  実行前に戻されます。*package*を変更したい時は、
+  eval-expression (Esc Esc) で変更してください。
+")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "session-ext")
+ ("version" . "2008.01.11")
+ ("author" . "Masahiro Nakano")
+ ("file" . "session-ext2008.01.11928e53d3d91c1ebf414b351817f282e2.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fsession-ext&file=session-ext2008.01.11928e53d3d91c1ebf414b351817f282e2.tar.gz")
+ ("description" . "セッションに含める情報を拡張するために、フックを追加しました。
+このファイルをロードしただけでは、オリジナルの動作とほとんど違いありま
+せん。基本的にフックを追加する事で、処理を追加できるようにします。
+
+多くの拡張lispでこれらの関数を再定義していて、競合する原因となっていま
+す。それを解消するためにいくつかのフックを追加し、拡張lispが再定義する
+ことなくフックを追加する事で機能を追加できるようにします。
+
+
+save-session-info, restore-session-info, load-session,
+list-buffer-info の定義を上書きしています。
+")
+ ("md5" . "67d228a5113696a7a5476c77f9737285")
+ ("time" . 3408966001)
+ ("depends")
+ ("category" "Utilities" "Lisp")
+ ("changes" . "  on 12/11/2006
+   ・restore-session-info, list-buffer-info に対してもフックを追加。
+   ・誤ってdebug用のコードが入っていたのを修正
+
+  on 09/08/2006
+   ・公開
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "ext-lisp-maketags")
+ ("version" . "2008.04.29")
+ ("author" . "Masahiro Nakano")
+ ("file" . "ext-lisp-maketags2008.04.29f76127b45935ad9fa5fc5e10b4f5ba0d.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Fext-lisp-maketags&file=ext-lisp-maketags2008.04.29f76127b45935ad9fa5fc5e10b4f5ba0d.tar.gz")
+ ("description" . "lisp用のmaketagsを上書きします．
+オリジナルのlisp用のmaketagsでは、tagを生成してくれない構文がいくつかあるので、
+そうした構文でもtagを生成するようにします。
+
+元のコードとの差分は
+ ・tag生成過程のエラー補足の追加．
+ ・defstructへの対応
+ ・defmethod defgeneric si::defun-builtin defsetf define-setf-method
+   deftype defpred define-history-variable の追加
+ ・defconstの追加
+ ・let/progn 等の内側探索
+ ・(si:*fset 'xxx yyy) / (setf (symbol-function 'xxx) yyy) の対応
+ ・(setq-default xxx yyy) の対応
+となっています．
+")
+ ("md5" . "5818d5dda94c96ff6a3cf6162def2a05")
+ ("time" . 3418413711)
+ ("depends")
+ ("category" "Utilities")
+ ("changes" . "   on 2008-04-15
+    ・ffiの関数に対応 (define-dll-entryなど)
+    ・タグファイルの行頭に空白が入ってしまうバグを修正
+  
+   on 1/8/2008
+    ・or の中もチェックするように変更
+
+   on 2/9/2007
+    ・setq-default もタグ付けするように (ただし、関数定義内等は対象外)
+
+   on 1/13/2007
+    ・define-history-variable に対応
+
+   on 12/08/2006
+    ・途中でパーズできないS式が出てきても無視して続けるように。
+    ・ni-autoload でうまくロードできなかったのを修正。
+
+   on 11/21/2006
+    ・ライセンス条項追加
+    ・autoload化
+    ・細かな修正
+
+   on 11/21/2006
+    ・公開
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "insert-character")
+ ("version" . "2008.12.27")
+ ("author" . "Masahiro Nakano")
+ ("file" . "insert-character2008.12.2726b1268e9438a6e2f5cef342224c4250.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fwhimsical%2Finsert-character&file=insert-character2008.12.2726b1268e9438a6e2f5cef342224c4250.tar.gz")
+ ("description" . "■機能
+様々な文字の入力を、キーバインド・リージョン内の置換・abbrev風入力によ
+って行います。
+
+$XYZZY/.insert-character.sample を $XYZZY/.insert-character に名前を変
+更するなどして、そこで設定してください。
+
+sampleの設定ファイルとデフォルトのキーバインドでは、
+  ・C-? a で α (半角) が入力できます。
+  ・M-x texify-on したとき、\\alpha と入力すると、α (半角) が入力されます。
+
+■インストール
+  $XYZZY/.insert-character.sample を $XYZZY/.insert-character に名前を
+  変更してください。
+
+  ni-autoload 使用している人は以下は不要です。
+  site-lisp.l か .xyzzy に以下を追加してください。
+
+    (require \"insert-character\")
+
+  必要であれば、ダンプしてxyzzyを立ち上げなおして下さい。
+")
+ ("md5" . "06037ae3d76f48ef189dde6a1233ece1")
+ ("time" . 3439375539)
+ ("depends")
+ ("category" "Documentation")
+ ("changes" . " on 2008-12-27
+  ・公開
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)
+)

@@ -1,0 +1,23 @@
+("name" . "人生捨ててます？")
+("author" . "LKPTeam")
+("url" . "http://www5d.biglobe.ne.jp/~lostland/ndiary/")
+("description" . "not documented.")
+("packages" (("name" . "qdbm") ("version" . "0.0.0.1") ("author" . "LKPTeam") ("file" . "qdbm.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/qdbm.lzh") ("description" . "QDBM on xyzzy") ("md5" . "2d13e7a4207d7383d0a444ef644e50f5") ("time" . 3320490601) ("depends") ("category" "Library") ("changes" . "First release") ("notice" . "QDBM(<http://qdbm.sourceforge.net/>)をxyzzyから使うためのパッケージです。
+QDBMのWindows用バイナリパッケージが必要です。
+その他についてはreadme.txtをご覧下さい。") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "svn-mode") ("version" . "0.0.2.0") ("author" . "LKPTeam") ("file" . "svn-mode.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/svn-mode.lzh") ("description" . "svn-mode for xyzzy") ("md5" . "0b57e6b8d8809ca97b269707386db8ab") ("time" . 3329732153) ("depends" "xml-parser-modoki") ("category" "Editing") ("changes" . "show-updatesスイッチを指定したときのバグを修正（したつもり）
+svn-diff コマンドでリビジョン表示が文字化けするのを修正（したつもり）
+svn blameコマンドでリビジョンを指定する際のコマンドをC-u C-c bからC-u 0 C-c bへ変更
+開いているファイルのリポジトリに対してsvn blameコマンドを実行できるように(C-u 1 C-c b)修正
+svn mergeコマンドを使えるように（svn merge sourceURL1@[N] sourceURL2@[M] WCPATH形式のみ）
+
+") ("notice" . "めちゃくちゃ適当簡易svn-modeです。
+Subversion管理下のファイルをチェックインしたりできます。") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "mlx") ("version" . "0.0.0.6") ("author" . "LKPTeam") ("file" . "mlx.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/mlx.lzh") ("description" . "music library on xyzzy") ("md5" . "4391feaf121ad5722ef86e58724972f6") ("time" . 3308894296) ("depends" "winamp" "api") ("category" "Graphics/Sound") ("changes" . "ライセンスにNYSLを採用。COPYING.txtを追加。") ("notice" . "Music library. winamp、media playerとかのmedia libraryのようなもの……かも。
+佐野さんの作ったwinamp.lが必須です。
+~/.xyzzy か site-lisp/siteinit.l に初期設定が必要です") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "chocoa-mode") ("version" . "0.0.0.1") ("author" . "LKPTeam") ("file" . "chocoa-mode.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/chocoa-mode.lzh") ("description" . "CHOCOA Script mode") ("md5" . "5403358f53fc4be32fed5a0e39539888") ("time" . 3308894223) ("depends") ("category" "Editing") ("changes" . "ライセンスにNYSLを採用。COPYING.txtを追加。") ("notice" . ".xyzzyに初期設定が必要です。chocoa-mode.lをご覧下さい。") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "quote-menu") ("version" . "0.0.0.2") ("author" . "LKPTeam") ("file" . "quote-menu.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/quote-menu.lzh") ("description" . "引用つきコピー、貼付メニューの付加") ("md5" . "37b2a6449fa0ab5ef8e51d1ee332984b") ("time" . 3308894311) ("depends") ("category" "Utilities") ("changes" . "ライセンスにNYSLを採用。COPYING.txtを追加。") ("notice" . "quote-menu.lにいろいろ説明が載っていますので、初期設定などはそちらを参照のこと。
+アイコンファイルは付属しませんので、ツールバーを拡張する場合は自分でアイコンファイルを作ってください。") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "libini") ("version" . "0.0.0.1") ("author" . "LKPTeam") ("file" . "libini.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/libini.lzh") ("description" . "iniファイルをいじくるユーティリティ") ("md5" . "b2d3708019286c8dd19c325d383658a4") ("time" . 3308894281) ("depends") ("category" "Libraries") ("changes" . "ライセンスにNYSLを採用。COPYING.txtを追加。") ("notice" . "libini.lだけインストールしても意味がありません。") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "chprtformat") ("version" . "0.0.0.2") ("author" . "LKPTeam") ("file" . "chprtformat.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/chprtformat.lzh") ("description" . "印刷様式切り替えユーティリティ") ("md5" . "c03d16cfd48e88d30a6c2a6d4f8ea6c1") ("time" . 3308894264) ("depends" "libini") ("category" "Utilities") ("changes" . "ライセンスにNYSLを採用。COPYING.txtを追加。") ("notice" . "libini.lが必要です
+~/.xyzzy あるいは site-lisp/siteinit.l に設定が必要です。詳しくはchprtformat.l を参照して下さい。
+導入する前に印刷の設定がxyzzy.iniに含まれているか確認して下さい。
+xyzzy.iniの場所はOSに依って違いますが、\"(merge-pathnames \"xyzzy.ini\" (user-config-path))\"で取得できるでしょう。") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "scriptMAKI-mode") ("version" . "0.0.0.1") ("author" . "LKPTeam") ("file" . "scriptMAKI-mode.lzh") ("src" . "http://www5d.biglobe.ne.jp/~lostland/xyzzy/scriptMAKI-mode.lzh") ("description" . "script MAKI 用モード") ("md5" . "d95ec688f87ea4ead47905882c272fa1") ("time" . 3308894324) ("depends") ("category" "Editing") ("changes" . "ライセンスにNYSLを採用。COPYING.txtを追加。") ("notice" . "以下のコードを ~/.xyzzy あるいは site-lisp/siteinit.l に追加して下さい。
+(require \"scriptMAKI/scriptMAKI-mode\")
+(setq *scriptMAKI-mc-path* \"X:/path/to/winamp/sdk/maki/mc.exe\")
+(pushnew '(\"\\.m$\" . scriptMAKI-mode) *auto-mode-alist*)") ("load-after-install" . "") ("load-before-uninstall" . "")))

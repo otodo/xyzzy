@@ -1,0 +1,105 @@
+;avvrevを自動読み込み
+(defvar *abbrev-file-name* "~/.abbrev_defs")
+(quietly-read-abbrev-file *abbrev-file-name*)
+(load-library "abbrev-complition")
+(global-set-key '(#\C-x #\') 'completion-abbreve-table)
+(setq *do-expand-after-complition* t)
+(setq *do-expand-all-in-abbrev-complition :all)
+;abbrevを自動保存
+(push #'(lambda ()
+	  (write-abbrev-file nil))
+      *kill-xyzzy-hook*)
+;
+;KaTeXの読み込み設定
+(push "~/site-lisp/katex" *load-path*)
+(require "elisp")
+(push '("\\.tex$" . elisp::katex-mode) *auto-mode-alist*)
+(autoload 'elisp::katex-mode "katex" t)
+;(setf elisp::tex-command "platex")
+(setq elisp::tex-command "platex")
+(setq elisp::tex-command "platex -src")
+;; タイプセットバッファの高さを調整
+(setf elisp::KaTeX-default-pop-window-height "3")
+;自動改行なし
+(add-hook 'elisp::katex-mode-hook
+               #'(lambda ()
+                  (auto-fill-mode nil)))
+;Source Special
+(defun katex-dvisrcprv ()
+  (interactive)
+  (let* ((tex-file (get-buffer-file-name))
+         (dvi-file (el::KaTeX-get-preview-file-name)))
+    (call-process (concat el::dvi2-command " -1 " dvi-file " \"\# "
+                          (format nil "~D" (current-line-number)) " " tex-file "\"")
+                  :exec-directory (directory-namestring tex-file))))
+;dvips
+(setq dviprint-from-format "-p %b")
+(setq dviprint-to-format "-l %e")
+(setq dviprint-command-format "dvipsk %f %t -f %s | lpr")
+(defvar dvips-command "dvipsk -Pdl")
+(defun KaTeX-dvi2ps ()
+(interactive)
+(KaTeX-save-buffers)
+(KaTeX-call-command-on-file dvips-command KaTeX-typeset-buffer))
+;
+;
+;自動インデント
+(global-set-key #\RET 'newline-and-indent)
+;
+;Aspell setting
+(import '(ed::aspell ed::*aspell-command* ed::*aspell-language*))
+(autoload 'aspell "aspell" t)
+(global-set-key #\F1 'aspell)
+(global-set-key #\MBtnDown 'aspell)
+(setq *aspell-command* "C:\\Program Files\\Aspell\\bin\\aspell.exe -a")
+(setq ed::*aspell-max-choices* 9)
+(setq ed::*aspell-assigned-characters* '((#\.     "Ignore"      nil)
+                                         (#\i     "Ignore all"   t )
+                                         (#\r     "Replace"     nil)
+                                         (#\R     "Replace all"  t )
+                                         (#\+     "Add"          t )
+                                         (#\u     "Add lower"    t )
+                                         (#\x     "EXit"        nil)
+                                         (#\!     "Abort"       nil)))
+;kill all buffers
+(global-set-key #\M-k 'kill-all-buffers)
+;Netinstaller
+(require "ni/setup")
+(ni-autoload)
+;ttray（常駐風）タスクトレイ
+;(require "ttray")
+;(require "my-ttray")
+;インクリメントサーチ
+(require "isearch")
+;全選択
+(global-set-key '(#\C-x #\h) 'selection-whole-buffer)
+;引用符付き貼り付け
+(defun my-paste-with-quote ()
+  (interactive "*")
+  (unless (clipboard-empty-p)
+    (let ((lines (split-string (get-clipboard-data)
+                               #\LFD)))
+      (dolist (l lines)
+        (insert (format nil "~A~A~%" *quotation-prefix* l))))))
+;
+;my-bookmark
+(require "my-bookmark")
+
+;extmail
+(require "extmail")
+;
+;changelog
+(require "changelogmemo/main")
+;("名前" . "設定ファイル") のリスト(複数指定可)
+(setq *cl-config-file-alist*
+      '(("changelogmemo" . "~/changelogmemo/config.l")))
+(add-hook '*post-startup-hook* 'cl-start)
+;ツールバーを使う
+(defun cl-tool-bar ()
+  (create-tool-bar
+   'cl-tool-bar
+   (merge-pathnames "toolbar.bmp" (etc-path))
+   `(("clmemo" 38
+      ,#'(lambda () (interactive) (funcall cl::*tool-bar-function*))
+      ,#'(lambda () (funcall cl::*tool-bar-check-function*))))))
+(define-command-bar 'cl-tool-bar "CLメモ(&M)")

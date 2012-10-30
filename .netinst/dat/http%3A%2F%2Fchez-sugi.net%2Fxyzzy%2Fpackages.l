@@ -1,0 +1,5 @@
+("name" . "chez sugi")
+("author" . "Shinichi Sugiyama")
+("url" . "http://chez-sugi.net/")
+("description" . "none")
+("packages" (("name" . "xml-mode") ("version" . "2.092") ("author" . "Shinichi Sugiyama") ("file" . "xml-mode-2_092.lzh") ("src" . "http://chez-sugi.net/xyzzy/xml-mode-2_092.lzh") ("description" . "XMLファイルを編集するためのメジャーモード") ("category" "Editing") ("md5" . "d530da4fb429beddf4253d963c645612") ("time" . 3395582482) ("depends") ("changes" . "CDATAが閉じられていないXMLファイル読込時のエラーを修正。") ("notice" . "") ("load-after-install" . "") ("load-before-uninstall" . "")))

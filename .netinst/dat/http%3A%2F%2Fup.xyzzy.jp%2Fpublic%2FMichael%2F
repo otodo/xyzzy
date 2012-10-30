@@ -1,0 +1,127 @@
+("name" ."up.xyzzy.jp/public/Michael/")
+("author" . "")
+("url" . "http://up.xyzzy.jp/public/Michael/")
+("description" . "")
+("packages"
+( ("name" . "lib-hanako")
+ ("version" . "2011.02.03")
+ ("author" . "YAMAMOTO Naoaki")
+ ("file" . "lib-hanako2011.02.03b0ca95b862b9ef03397d027c4fa201a0.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2FMichael%2Flib-hanako&file=lib-hanako2011.02.03b0ca95b862b9ef03397d027c4fa201a0.tar.gz")
+ ("description" . "環境省花粉観測システム（愛称：はなこさん）から
+花粉飛散情報を取得するライブラリーです。
+詳細情報：環境省花粉観測システム
+          ⇒ http://kafun.taiki.go.jp/
+
+インストールしただけでは動作しません。
+簡易使用例を参照してください。")
+ ("md5" . "9ae15c321997adef71c7103319de7aef")
+ ("time" . 3505649363)
+ ("depends" "xml-http-request")
+ ("category" "Network" "Libraries" "Resource")
+ ("changes" . "初公開")
+ ("notice" . "* 得られた情報は転用や営利目的とした利用を
+  禁止していますので、個人利用にとどめてください。
+
+* 関東以西のデータの提供期間は、2月初めから5月末までのようです。 [#o870372e]
+
+* MIYAMUKO Katsuyuki さんの 「xml-http-request」を使用しています。 [#c45e5896]
+  NetInstaller でインストールできます。
+")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "weather-forecast")
+ ("version" . "2012.06.08")
+ ("author" . "YAMAMOTO Naoaki")
+ ("file" . "weather-forecast2012.06.086564428685a55204a706fb8d5cd5bf5b.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2FMichael%2Fweather-forecast&file=weather-forecast2012.06.086564428685a55204a706fb8d5cd5bf5b.tar.gz")
+ ("description" . "気象庁発表の天気予報文を見るためのへなちょこツールです。
+  情報提供：国際気象海洋株式会社 (URL = http://www.imocwx.com/)
+")
+ ("md5" . "d5b87b5d99d2fcfd40d40653f6217ebe")
+ ("time" . 3548071876)
+ ("depends")
+ ("category" "Network" "Miscellaneous")
+ ("changes" . "2012-06-07	0.27
+	- コンフィグサンプルの府県予報用キーワードを更新
+
+2011-02-05	0.26
+	- Netinstaller対応
+	- 最適化
+
+2010-01-26	0.25
+	- フレーム名、コンフィグファイル名の defconstant を defvar 変更
+
+2009-11-18	0.24
+	- 予報文の発表時刻を表示
+
+2007-03-17	0.23
+	- Licenceファイル添付
+
+2006-12-26	0.22
+	- hookの名前を変更
+
+2006-11-28	0.21
+	- *weather-forecast-file-list*の順番を変更
+	- コンテキストメニュー対応
+	- 色づけをもっと柔軟に(完了?)
+
+2006-10-17	0.20
+	- 色付けの指定方法をもっと柔軟に(其れなり)
+	- 週間天気予報対応(仮対応?)
+
+2006-10-13	0.19
+	- 色付けの指定方法を柔軟に(其れなり)
+
+2006-09-28	0.18
+	- 色付け表示(其れなり)
+	- パッケージ化
+
+2006-09-20	0.17
+	- ファイル構成を変更
+
+2006-03-22	0.16
+	- 予報府県名の指定を正規表現可能に変更(一時的)
+
+2005-08-30	0.15
+	- 情報提供元サーバの処理分散化に対応した
+	    旧：http://www.imoc.co.jp/
+	    新：http://www.imocwx.com/
+
+2004-06-28	0.14
+	- 使用するブラウザを指定出来るようにした
+
+2004-06-18	0.13
+	- 標準のブラウザを起動出来るようにした
+
+2004-04-09	0.12
+	- IME制御(暫定)
+
+2004-03-31	0.11
+	- 必要最小限のファイル取得
+	- モードキー追加&修正
+
+2004-03-28	0.10
+	- 展開先を専用バッファに変更
+	- フレーム対応
+
+2004-03-25	0.04
+	- 取得時間表示停止
+	- 公開の為ソース整理
+
+2004-03-09	0.03
+	- 取得時間表示
+	- バグ対応
+
+2004-03-05	0.02
+	- インタラクティブに変更
+	- 処理対象を全国に変更
+
+2004-03-04	0.01
+	- 初版作成
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)
+)

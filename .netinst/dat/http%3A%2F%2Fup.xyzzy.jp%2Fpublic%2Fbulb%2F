@@ -1,0 +1,201 @@
+("name" ."up.xyzzy.jp/public/bulb/")
+("author" . "")
+("url" . "http://up.xyzzy.jp/public/bulb/")
+("description" . "")
+("packages"
+( ("name" . "monday")
+ ("version" . "2008.02.02")
+ ("author" . "bulb")
+ ("file" . "monday2008.02.02ec0634341b660c8cdbfc61cd0f7d688f.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fmonday&file=monday2008.02.02ec0634341b660c8cdbfc61cd0f7d688f.tar.gz")
+ ("description" . "monday.vimを参考にして作ってみました。
+キャレット(カーソル)直下の単語をトグルします。
+・0 -> 1 -> 2 -> 3 ...
+・monday -> tuesday -> wednesday ...
+・True -> False -> True ...
+・public -> protected ->  private -> public ...
+          
+\"1st\" \"2nd\" \"3rd\" ... には、未対応です。")
+ ("md5" . "cad77ffeaae46888a40faa11c7e42aff")
+ ("time" . 3410945798)
+ ("depends")
+ ("category" "Editing" "Utilities")
+ ("changes" . "- 2008-02-02 文字がない場所でのエラー処理を追加
+             monday-get-current-word無駄処理を削除")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "cscope_bin")
+ ("version" . "2008.02.11")
+ ("author" . "bulb")
+ ("file" . "cscope_bin2008.02.11609943b2cfdfb7c584c09f585751720d.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fcscope_bin&file=cscope_bin2008.02.11609943b2cfdfb7c584c09f585751720d.tar.gz")
+ ("description" . "Cscope on Win32
+
+http://iamphet.nm.ru/cscope/index.html
+からの再配布(BSD License)です。
+")
+ ("md5" . "e0322de01f87f2c969d5865a54d6da0f")
+ ("time" . 3411709778)
+ ("depends")
+ ("category" "Development" "Utilities")
+ ("changes" . "初版")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "gtags_bin")
+ ("version" . "2008.02.11")
+ ("author" . "bulb")
+ ("file" . "gtags_bin2008.02.110c97ee757ed6f9d3572de57f471a2da2.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fgtags_bin&file=gtags_bin2008.02.110c97ee757ed6f9d3572de57f471a2da2.tar.gz")
+ ("description" . "global for win32
+
+http://www.geocities.com/jadoxa/global/index.html
+からの再配布(GPL3)です。
+
+exeファイルは次の場所にインストールされます。
+
+$XYZZYHOME/bin/gtags.exe
+$XYZZYHOME/bin/global.exe
+$XYZZYHOME/bin/gozilla.exe
+$XYZZYHOME/bin/gtags-cscope.exe
+$XYZZYHOME/bin/gtags-parser.exe
+$XYZZYHOME/bin/htags.exe")
+ ("md5" . "2b3a9c6733d2c45c6f23396618ae1173")
+ ("time" . 3411711912)
+ ("depends")
+ ("category" "Development" "Utilities")
+ ("changes" . "")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "gtags")
+ ("version" . "2007.12.27")
+ ("author" . "bulb")
+ ("file" . "gtags2007.12.2746b7cd35165a87111eceb41f46fafa93.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fgtags&file=gtags2007.12.2746b7cd35165a87111eceb41f46fafa93.tar.gz")
+ ("description" . "gtags.elの移植です。GNU GLOBALを使用したタグジャンプを提供します。")
+ ("md5" . "188c234402dc3068146b46eb68032164")
+ ("time" . 3407705039)
+ ("depends" "emacs.l")
+ ("category" "Editing" "Development")
+ ("changes" . "  ・emacs.l依存の解消(NANRIさん提供)
+  ・gtags-find-tag-by-event(サポート外)あたりを修正
+    バイトコンパイルが通るように修正。
+  ・README.txtの添付
+")
+ ("notice" . "別途 gtags.exe, global.exe が必要になります。
+本家のwin32版をダウンロードしてPATHの通ったフォルダに置いてください。")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "ctags_bin")
+ ("version" . "2008.02.11")
+ ("author" . "bulb")
+ ("file" . "ctags_bin2008.02.11712da158e26d3510d6ff78974d169ce8.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fctags_bin&file=ctags_bin2008.02.11712da158e26d3510d6ff78974d169ce8.tar.gz")
+ ("description" . "exuberant ctags 日本語対応版
+
+http://hp.vector.co.jp/authors/VA025040/ctags/
+からの再配布(GPL2)です。
+
+exeファイルは次の場所にインストールされます。
+$XYZZYHOME/bin/ctags.exe
+")
+ ("md5" . "ff601a4a29bce8f837db3ac9658a2eb6")
+ ("time" . 3411710841)
+ ("depends")
+ ("category" "Development" "Utilities")
+ ("changes" . "初版")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "cscope")
+ ("version" . "2008.08.27")
+ ("author" . "bulb")
+ ("file" . "cscope2008.08.27f05f4f1a648358c7620919f7ae3971b9.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fcscope&file=cscope2008.08.27f05f4f1a648358c7620919f7ae3971b9.tar.gz")
+ ("description" . "タグジャンプ用のフロントエンドを提供します(マイナーモード)。
+ctagsやgtagsの代替になるものです。
+対応言語：C/C++
+
+※外部コマンド cscope.exe が別途必要になります。
+  以下のいづれかの方法で入手して下さい。
+1. NetInstaller の cscope_bin を入れる
+2. Win32版バイナリ http://iamphet.nm.ru/cscope/index.html
+3. cygwin環境で make")
+ ("md5" . "a0f0d945dfefc4579c673f6041afeef4")
+ ("time" . 3428828767)
+ ("depends")
+ ("category" "Development" "Utilities" "BSDL")
+ ("changes" . "2008-08-27
+	* cscope-result-mode 時のデザインを少し変更
+	* 以下の関数が正しく動作していなかったのを修正
+	  - cscope-find-egrep-pattern
+	  - cscope-find-this-text-string
+
+2008-08-21
+	* いろいろと追加
+	* タグジャンプ用のスタックをサポート
+	* *cscope-1pane-view* 1paneモード追加
+	* *cscope-find-symbol-direct-mode* さくさく行きたい人向け
+
+
+2008-04-24
+	* cscope-rebuild-db が正しく動作していなかったのを修正
+	* gtags.el風味なモードを追加
+
+2008-03-18
+	* miyamukoさん提供patchの取り込み
+
+2008-03-17
+	* リファクタリングなど
+
+2008-03-16
+	* symbol と 実行ディレクトリを指定できるように find 系の関数を変更。
+	* cscope-find-c-symbol
+	* cscope-find-global-definition
+	* cscope-find-functions-called
+	* cscope-find-functions-calling-this-function
+	* cscope-find-this-text-string
+	* cscope-find-file
+	* cscope-find-files-including
+
+2008-03-14
+	* symbol などの強調表示対応
+	* jump用の stack を用意
+	* cscope-back-tag-jump
+	* cscope-push-stack
+
+2008-02-17 *cscope* バッファー上で再検索できていなかったのを修正
+	* README.txtを追加
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)( ("name" . "highlight")
+ ("version" . "2008.05.28")
+ ("author" . "bulb")
+ ("file" . "highlight2008.05.2837ed74a0dea851db95018d506f8f49e4.tar.gz")
+ ("src" . "http://up.xyzzy.jp/public_backend/index.php?plugin=attach&pcmd=open&refer=home%2Fbulb%2Fhighlight&file=highlight2008.05.2837ed74a0dea851db95018d506f8f49e4.tar.gz")
+ ("description" . "・カーソル(キャレット)直下の単語を色付けします。
+・highlight-regexp.el や hi-lock.el に似た機能
+")
+ ("md5" . "6d372825db8b574b374b0d76df5edc27")
+ ("time" . 3420968268)
+ ("depends")
+ ("category" "Utilities" "BSDL")
+ ("changes" . "- 2008.05.28
+	* delete-text-attributes に変更
+
+- 2008.05.24 リファクタリング
+	* highlight-get-current-word を変更
+	 skip-syntax-spec-forward, skip-syntax-spec-backward
+	 looking-at-backwardの削除
+
+- 2008.05.02 リファクタリング
+")
+ ("notice" . "")
+ ("load-after-install" . "")
+ ("load-before-uninstall" . "")
+)
+)

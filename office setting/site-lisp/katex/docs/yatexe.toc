@@ -1,0 +1,133 @@
+@numchapentry{What is YaTeX?}{1}{What is YaTeX?}{}
+@numsecentry{What is YaTeX?}{1.1}{}{}
+@numsubsecentry{What is YaTeX?}{1.1.1}{}{}
+@numsubsubsecentry{What is YaTeX?}{1.1.1.1}{}{}
+@numchapentry{Main features}{2}{Main features}{}
+@numsecentry{Main features}{2.1}{}{}
+@numsubsecentry{Main features}{2.1.1}{}{}
+@numsubsubsecentry{Main features}{2.1.1.1}{}{}
+@numchapentry{Installation}{3}{Installation}{}
+@numsecentry{Installation}{3.1}{}{}
+@numsubsecentry{Installation}{3.1.1}{}{}
+@numsubsubsecentry{Installation}{3.1.1.1}{}{}
+@numchapentry{Typesetting}{4}{Typesetting}{}
+@numsecentry{Typesetting}{4.1}{}{}
+@numsubsecentry{Typesetting}{4.1.1}{}{}
+@numsubsubsecentry{Typesetting}{4.1.1.1}{}{}
+@numsecentry{Calling typesetter}{4.2}{Calling typesetter}{}
+@numsecentry{Calling previewer}{4.3}{Calling previewer}{}
+@numsubsecentry{Calling previewer}{4.3.1}{}{}
+@numsubsubsecentry{Calling previewer}{4.3.1.1}{}{}
+@numsecentry{Printing out}{4.4}{Printing out}{}
+@numchapentry{%# notation}{5}{%#notation}{}
+@numsecentry{%# notation}{5.1}{}{}
+@numsubsecentry{%# notation}{5.1.1}{}{}
+@numsubsubsecentry{%# notation}{5.1.1.1}{}{}
+@numsecentry{To change the `latex' command or to split a source text.}{5.2}{Changing typesetter}{}
+@numsecentry{Static region}{5.3}{Static region for typesetting}{}
+@numsecentry{Lpr format}{5.4}{Lpr format}{}
+@numsecentry{Editing %# notation}{5.5}{Editing %# notation}{}
+@numchapentry{Completion}{6}{Completion}{}
+@numsecentry{Completion}{6.1}{}{}
+@numsubsecentry{Completion}{6.1.1}{}{}
+@numsubsubsecentry{Completion}{6.1.1.1}{}{}
+@numsecentry{Begin-type completion}{6.2}{Begin-type completion}{}
+@numsecentry{Section-type completion}{6.3}{Section-type completion}{}
+@numsubsecentry{view-sectioning}{6.3.1}{view-sectioning}{}
+@numsecentry{Large-type completion}{6.4}{Large-type completion}{}
+@numsecentry{Maketitle-type completion}{6.5}{Maketitle-type completion}{}
+@numsecentry{Arbitrary completion}{6.6}{Arbitrary completion}{}
+@numsecentry{End completion}{6.7}{End completion}{}
+@numsecentry{Accent completion}{6.8}{Accent completion}{}
+@numsecentry{Image completion of mathematical sign}{6.9}{Image completion}{}
+@numsecentry{Greek letters completion}{6.10}{Greek letters completion}{}
+@numchapentry{Local dictionaries}{7}{Local dictionaries}{}
+@numsecentry{Local dictionaries}{7.1}{}{}
+@numsubsecentry{Local dictionaries}{7.1.1}{}{}
+@numsubsubsecentry{Local dictionaries}{7.1.1.1}{}{}
+@numchapentry{Commenting out}{8}{Commenting out}{}
+@numsecentry{Commenting out}{8.1}{}{}
+@numsubsecentry{Commenting out}{8.1.1}{}{}
+@numsubsubsecentry{Commenting out}{8.1.1.1}{}{}
+@numchapentry{Cursor jump}{9}{Cursor jump}{}
+@numsecentry{Cursor jump}{9.1}{}{}
+@numsubsecentry{Cursor jump}{9.1.1}{}{}
+@numsubsubsecentry{Cursor jump}{9.1.1.1}{}{}
+@numsecentry{Jump to corresponding object}{9.2}{Jump to corresponding object}{}
+@numsecentry{Invoking image processor}{9.3}{Invoking image processor}{}
+@numsecentry{Jump to main file}{9.4}{Jump to main file}{}
+@numsecentry{Jumping around the environment}{9.5}{Jumping around the environment}{}
+@numsecentry{Jumping to last completion position}{9.6}{Jumping to last completion position}{}
+@numchapentry{Changing and Deleting}{10}{Changing and Deleting}{}
+@numsecentry{Changing and Deleting}{10.1}{}{}
+@numsubsecentry{Changing and Deleting}{10.1.1}{}{}
+@numsubsubsecentry{Changing and Deleting}{10.1.1.1}{}{}
+@numsecentry{Changing La@TeX {} commands}{10.2}{Changing LaTeX commands}{}
+@numsecentry{Killing La@TeX {} commands}{10.3}{Killing LaTeX commands}{}
+@numchapentry{Filling}{11}{Filling}{}
+@numsecentry{Filling}{11.1}{}{}
+@numsubsecentry{Filling}{11.1.1}{}{}
+@numsubsubsecentry{Filling}{11.1.1.1}{}{}
+@numsecentry{Filling an item}{11.2}{}{}
+@numsecentry{Filling paragraph}{11.3}{}{}
+@numchapentry{Updation of @code {\includeonly}}{12}{Updation of includeonly}{}
+@numsecentry{Updation of @code {\includeonly}}{12.1}{}{}
+@numsubsecentry{Updation of @code {\includeonly}}{12.1.1}{}{}
+@numsubsubsecentry{Updation of @code {\includeonly}}{12.1.1.1}{}{}
+@numchapentry{What column?}{13}{What column}{}
+@numsecentry{What column?}{13.1}{}{}
+@numsubsecentry{What column?}{13.1.1}{}{}
+@numsubsubsecentry{What column?}{13.1.1.1}{}{}
+@numchapentry{Intelligent newline}{14}{Intelligent newline}{}
+@numsecentry{Intelligent newline}{14.1}{}{}
+@numsubsecentry{Intelligent newline}{14.1.1}{}{}
+@numsubsubsecentry{Intelligent newline}{14.1.1.1}{}{}
+@numchapentry{Online help}{15}{Online help}{}
+@numsecentry{Online help}{15.1}{}{}
+@numsubsecentry{Online help}{15.1.1}{}{}
+@numsubsubsecentry{Online help}{15.1.1.1}{}{}
+@numsecentry{Online help}{15.2}{}{}
+@numsecentry{Online apropos}{15.3}{}{}
+@numsecentry{When no descriptions are found...}{15.4}{}{}
+@numchapentry{Browsing file hierarchy}{16}{Browsing file hierarchy}{}
+@numsecentry{Browsing file hierarchy}{16.1}{}{}
+@numsubsecentry{Browsing file hierarchy}{16.1.1}{}{}
+@numsubsubsecentry{Browsing file hierarchy}{16.1.1.1}{}{}
+@numchapentry{Cooperation with other packages}{17}{Cooperation with other packages}{}
+@numsecentry{Cooperation with other packages}{17.1}{}{}
+@numsubsecentry{Cooperation with other packages}{17.1.1}{}{}
+@numsubsubsecentry{Cooperation with other packages}{17.1.1.1}{}{}
+@numsecentry{gmhist}{17.2}{}{}
+@numsecentry{min-out}{17.3}{}{}
+@numchapentry{Customizations}{18}{Customizations}{}
+@numsecentry{Customizations}{18.1}{}{}
+@numsubsecentry{Customizations}{18.1.1}{}{}
+@numsubsubsecentry{Customizations}{18.1.1.1}{}{}
+@numsecentry{Lisp variables}{18.2}{Lisp variables}{}
+@numsubsecentry{All customizable variables}{18.2.1}{All customizable variables}{}
+@numsubsecentry{Sample definitions}{18.2.2}{Sample definitions}{}
+@numsubsecentry{Hook variables}{18.2.3}{Hook variables}{}
+@numsubsecentry{Hook file}{18.2.4}{Hook file}{}
+@numsecentry{Add-in functions}{18.3}{Add-in functions}{}
+@numsubsecentry{What is add-in functions?}{18.3.1}{}{}
+@numsubsecentry{Procedure}{18.3.2}{}{}
+@numsubsecentry{How the add-in function works}{18.3.3}{How the add-in function works}{}
+@numsubsubsecentry{Defining `option add-in'}{18.3.3.1}{Defining option-add-in}{}
+@numsubsubsecentry{Defining `argument add-in'}{18.3.3.2}{Defining argument-add-in}{}
+@numsubsecentry{How the function is called}{18.3.4}{How the function is called}{}
+@numsubsecentry{Useful functions for creating add-in}{18.3.5}{Useful functions for creating add-in}{}
+@numsubsecentry{Contribution}{18.3.6}{Contribution}{}
+@numsecentry{Add-in generator}{18.4}{Add-in generator}{}
+@numsubsecentry{Generator for beginners}{18.4.1}{}{}
+@numsubsecentry{Simple generator}{18.4.2}{}{}
+@numsubsubsecentry{Generating ``option add-in''}{18.4.2.1}{}{}
+@numsubsubsecentry{Generating ``argument add-in''}{18.4.2.2}{}{}
+@numsubsecentry{Contribution}{18.4.3}{}{}
+@numchapentry{Etcetera}{19}{Etcetera}{}
+@numsecentry{Etcetera}{19.1}{}{}
+@numsubsecentry{Etcetera}{19.1.1}{}{}
+@numsubsubsecentry{Etcetera}{19.1.1.1}{}{}
+@numchapentry{Copying}{20}{Copying}{}
+@numsecentry{Copying}{20.1}{}{}
+@numsubsecentry{Copying}{20.1.1}{}{}
+@numsubsubsecentry{Copying}{20.1.1.1}{}{}

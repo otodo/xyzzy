@@ -1,0 +1,5 @@
+("name" . "WOMO")
+("author" . "oosawa")
+("url" . "http://womo.nconc.net/")
+("description" . "")
+("packages" (("name" . "hateda-mode") ("version" . "0.3.1") ("author" . "oosawa") ("file" . "hateda-mode.lzh") ("src" . "http://womo.nconc.net/misc/files/hateda-mode.lzh") ("description" . "はてなダイアリー用のメジャーモードとはてダラとの連携ツール") ("category") ("md5" . "8b40c3eaeccaf7db7733fa72389e4c2e") ("time" . 3398539933) ("depends") ("changes" . "グループ機能対応他") ("notice" . "") ("load-after-install" . "") ("load-before-uninstall" . "")) (("name" . "html-popup-menu") ("version" . "0.0.1") ("author" . "oosawa") ("file" . "html-popup-menu.lzh") ("src" . "http://womo.nconc.net/misc/files/html-popup-menu.lzh") ("description" . "HTML ファイルを修正するときに便利なポップアップメニューです。html+-mode と併用してください。") ("category" "Editing") ("md5" . "ab84333bc645073e95358ad4645eb705") ("time" . 3398475677) ("depends" "html+-mode") ("changes" . "Netinstaller に対応しました。") ("notice" . "html+-mode が必須です。") ("load-after-install" . "") ("load-before-uninstall" . "")))
