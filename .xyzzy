@@ -31,3 +31,7 @@
 (load-library "ruby-misc")	;‚»‚Ì‘¼‚ðŽg‚¤‚È‚ç
 ; ri.rb‚Ü‚Å‚ÌƒpƒX
 ;(setq *ruby-information-command* "C:/cygwin/usr/local/bin/ri.rb")
+
+;KaTeX
+(setq *load-path* (cons "C:/Program Files (x86)/xyzzy/site-lisp/katex" *load-path*))
+(require "elisp")

@@ -1,0 +1,29 @@
+
+(set-default 'elisp::KaTeX-read-singlecmd-history '(
+))
+
+(set-default 'elisp::KaTeX-read-environment-history '(
+))
+
+(set-default 'elisp::KaTeX-read-section-history '(
+))
+
+(set-default 'elisp::KaTeX-read-fontsize-history '(
+))
+
+(set-default 'elisp::KaTeX-call-command-history '(
+))
+
+(set-default 'elisp::KaTeX-preview-command-history '(
+"C:/ptex/dviout/dviout -1"
+"C:/w32tex/dviout/dviout -1"
+"dviout -wait=0"
+))
+
+(set-default 'elisp::KaTeX-preview-file-history '(
+"PythagoreanTheorem"
+))
+
+(set-default 'elisp::KaTeX-length-history '(
+))
+

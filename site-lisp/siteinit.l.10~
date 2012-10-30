@@ -12,7 +12,6 @@
 ; TeXのコマンド
 (setq elisp::tex-command "platex")
 ;(setq elisp::tex-command "platex -src") ; source specialを使う
-(setq elisp::dvi2-command "C:/ptex/dviout/dviout -1")
 
 ; 全般的な設定
 ;(setq elisp::KaTeX-use-AMS-LaTeX t) ; AMS-LaTeXを使う
