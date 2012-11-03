@@ -48,6 +48,7 @@
              (run-hooks '*text-mode-hook*) ; *text-mode-hook* を走らせる
 	      ))
 
+
 ;;grep dialog
 (global-set-key '(#\C-c #\g) 'grep-dialog)
 
@@ -62,8 +63,10 @@
   ;; 自動設定を利用する
   (ni-autoload)
 
+
 ;自動インデント
 (global-set-key #\RET 'newline-and-indent)
+
 
 ;kill all buffer
 (defun close-all-buffers ()
@@ -71,11 +74,12 @@
   (mapc 'kill-buffer (buffer-list)))
 (global-set-key '(#\M-k) 'close-all-buffers)
 
+
 ;ttray
 (require "ttray")
 (global-set-key '(#\C-x #\C-z) 'ttray-hide-xyzzy)
 
-;comment-toglle
-(require "generic-comment-toggle")
 
-
+;;; comment-out
+(require "comment-out-select-oneline")
+(global-set-key #\C-\; 'comment-out-selection-or-one-line)

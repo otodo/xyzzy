@@ -1,8 +1,17 @@
+;;;backup
+(require "backup") 
+(setq *hierarchic-backup-directory* t)
+
+;バックアップを取る場所を指定 in .xyzzy
+(setq *backup-directory* "C:/Program Files (x86)/xyzzy/backup/")
+
+
 ;;;aspell checker
 (import '(ed::aspell ed::*aspell-command* ed::*aspell-language*))
 (autoload 'aspell "aspell" t)
 (global-set-key #\M-a 'aspell)
 (setq *aspell-command* "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe -a")
+
 
 ;;;abbrev-complition
 (load-library "abbrev-complition")
@@ -12,13 +21,15 @@
 
 (global-set-key #\C-\; 'generic-comment-toggle)
 
+
 ;;;paren 括弧強調表示
 (require "paren")
 (turn-on-global-paren)
 ;; paren強調前の強調を常に
 (setq-default *paren-continue-original-attribute* t)
 
-;ruby mode
+
+;;;ruby mode
 (load-library "ruby")
 (push '("\\.rb$" . ruby-mode) *auto-mode-alist*)
 ; インデント量を変える
@@ -32,6 +43,7 @@
 ; ri.rbまでのパス
 ;(setq *ruby-information-command* "C:/cygwin/usr/local/bin/ri.rb")
 
-;KaTeX
+
+;;;KaTeX
 (setq *load-path* (cons "C:/Program Files (x86)/xyzzy/site-lisp/katex" *load-path*))
 (require "elisp")

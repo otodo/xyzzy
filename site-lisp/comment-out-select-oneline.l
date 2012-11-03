@@ -1,0 +1,21 @@
+(provide "comment-out-select-oneline")
+(in-package "user")
+
+(defun comment-out-selection-or-one-line (&optional count)
+  (interactive "p")
+  (if (pre-selection-p)
+      (progn
+        (require "comment")
+        (let ((fn (cond ((eq *prefix-args* 'universal-argument)
+                         (setq count (list count))
+                         'comment-do-uncomment)
+                        ((and (numberp count)
+                              (> 0 count))
+                         'comment-do-uncomment)
+                        (t
+                         'comment-do-comment)))
+              beg end)
+          (setq beg (selection-point) end (selection-mark))
+          (funcall fn beg end count)))
+    (toggle-one-line-comment)))
+(global-set-key #\C-\; 'comment-out-selection-or-one-line)
