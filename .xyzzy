@@ -19,7 +19,7 @@
 (setq *do-expand-after-complition* t)
 (setq *do-expand-all-in-abbrev-complition :all)
 
-(global-set-key #\C-\; 'generic-comment-toggle)
+;(global-set-key #\C-\; 'generic-comment-toggle)
 
 
 ;;;paren 括弧強調表示
@@ -30,16 +30,17 @@
 
 
 ;;;ruby mode
-(load-library "ruby")
-(push '("\\.rb$" . ruby-mode) *auto-mode-alist*)
+(add-hook '*ruby-mode-hook* #'(lambda () (set-tab-columns 2 (selected-buffer))))
+;(load-library "ruby")
+;(push '("\\.rb$" . ruby-mode) *auto-mode-alist*)
 ; インデント量を変える
-;(setq *ruby-indent-column* 3)
-(load-library "ruby-lister")
+;(setq *ruby-indent-column* 2)
+;(load-library "ruby-lister")
 ; rtags.rbまでのパス
 ;(setq *ruby-lister-rtags-path* "C:/ruby/rtags.rb")
-(load-library "ruby-debug")	;debugモードを使うなら
-(load-library "ruby-doc")	;rdモードを使うなら
-(load-library "ruby-misc")	;その他を使うなら
+;(load-library "ruby-debug")	;debugモードを使うなら
+;(load-library "ruby-doc")	;rdモードを使うなら
+;(load-library "ruby-misc")	;その他を使うなら
 ; ri.rbまでのパス
 ;(setq *ruby-information-command* "C:/cygwin/usr/local/bin/ri.rb")
 

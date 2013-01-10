@@ -80,6 +80,12 @@
 (global-set-key '(#\C-x #\C-z) 'ttray-hide-xyzzy)
 
 
+;;;Ruby-mode
+;(load-library "Gates"); Gates が好きならファイルの先頭に
+(load-library "ruby-mode")
+(push '("\\.rb$" . ruby-mode) *auto-mode-alist*)
+
+
 ;;; comment-out
 (require "comment-out-select-oneline")
 (global-set-key #\C-\; 'comment-out-selection-or-one-line)
